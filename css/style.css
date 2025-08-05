@@ -1,0 +1,282 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* enable smooth scrolling to all the required elements or you could add it to a specific element  */
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 60px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative; /*navigation bar set krne ke liye*/
+    /* opacity: 0.5; */
+    /* filter: brightness(90%); */
+}
+
+/* Navigation Bar : Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 60px;
+    margin: 3px 6px;
+    transform: scale(1.5);
+}
+
+/* Navigation Bar : List Styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Jost', sans-serif;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+#navbar ul a:hover{
+    background-color: white;
+    color: black;
+}
+#navbar::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: -1;
+    /* position: fixed; */
+    /* filter: brightness(20%); */
+    /* opacity: 0.2; */
+}
+.right{
+    /* border: 2px solid yellow; */
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+}
+#home::before{
+    content: "";
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    background: url('../img/img.jpg') no-repeat center center/cover;
+    background-attachment: scroll;
+    /* opacity: 0.8; */
+    filter: brightness(50%);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Crimson Text', serif;
+}
+
+/* Services Section */
+#services{
+    margin: 10px;
+    display: flex;
+    /* padding-bottom: 0px; */
+    margin-bottom: 0px;
+}
+#services .box{
+    border: 5px solid black;
+    border-radius: 30px;
+    margin: 2px 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    box-shadow: 10px 10px gray;
+    margin-bottom: 0px;
+}
+#services .box:hover{
+    transform: scale(1.01);
+}
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+    /* margin auto always works when height is set and display is set to block */
+    padding-top: 21px;
+}
+#services .box p{
+    padding: 0px 20px 25px 20px;
+    text-align: center;
+}
+
+/* Client Section */
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* background-color: #c4f0ff75; */
+    /* opacity: 0.3; */
+    z-index: -1;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 0px; */
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 160px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../img/envelopes.jpg');
+    /* opacity: 0.5; */
+    filter: brightness(50%);
+    z-index: -1;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.741);
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Jost', sans-serif;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Section */
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 120px 12px 12px 12px;
+}
+.h1-primary{
+    font-size: 2.8rem;
+    padding: 60px 12px 12px 12px;
+    /* padding-top: 60px; */
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px 12px 12px 12px;
+}
+.btn{
+    padding: 6px 20px;
+    margin: 15px;
+    color: white;
+    border: 5px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 10;
+}
+.btn1{
+    padding: 6px 20px;
+    margin: 15px;
+    color: black;
+    border: 5px solid black;
+    background-color: rgba(255, 255, 255, 0.741);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 10;
+    cursor: pointer;
+}
+.btn2{
+    padding: 8px 15px 8px 15px;
+    margin: 22px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color:  white;
+    border: 2px solid  white;
+    border-radius: 20px;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn2:hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: black;
+    border: 5px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+.btn1:hover{
+    color: black;
+    border: 5px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
